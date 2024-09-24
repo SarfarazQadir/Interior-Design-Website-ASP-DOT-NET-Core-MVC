@@ -1,0 +1,65 @@
+﻿@model List<User>
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4 mt-5">User Profile</h1>
+    <div class="author-box-center">
+        <form asp-action="UpdateuserProfile" enctype="multipart/form-data" method="post">
+            <center>
+                <img src="@("~/Adminassests/UserImages/"+Model[0].user_image)" hieght="100px" width="100px"
+                     asp-append-version="true" class="rounded-circle author-box-picture" />
+            </center>
+            <center>
+                <div class="author-box-name">
+                    <a href="@Url.Action("UserAccount","home")">@Model[0].user_name</a>
+                </div>
+            </center>
+            <input type="hidden" class="form-control" name="user_id" value="@Model[0].user_id"><br />
+            <input type="hidden" class="form-control" name="user_name" value="@Model[0].user_name">
+            <input type="hidden" class="form-control" name="user_phone" value="@Model[0].user_contact">
+            <input type="hidden" class="form-control" name="user_email" value="@Model[0].user_email">
+            <input type="hidden" class="form-control" name="user_password" value="@Model[0].user_password">
+             <div class="row d-flex justify-content-center">
+                <div class="col-md-3">
+                    <input type="file" class="form-control " name="user_image" value="@Model[0].user_image">
+
+
+
+                    <div class="clearfix"></div><br />
+                    <input type="submit" class="btn btn-danger" value="Update user Image" />
+                </div>
+            </div>
+        </form> <br /><br />
+
+
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+
+            <form asp-action="Updateuser" method="post" class="p-4 border rounded"
+                  style="background-color: #f9f9f9;" enctype="multipart/form-data">
+                <input type="hidden" name="user_id" value="@Model[0].user_id" />
+
+
+                <div class="form-group mb-3">
+                    <input type="text" name="user_name" value="@Model[0].user_name" class="form-control" placeholder="Enter user Name" />
+                </div>
+
+                <div class="form-group mb-3">
+                    <input type="text" name="user_contact" value="@Model[0].user_contact" class="form-control" placeholder="Enter user Phone" />
+                </div>
+
+                <div class="form-group mb-3">
+                    <input type="email" name="user_email" value="@Model[0].user_email" class="form-control" placeholder="Enter user Email" />
+                </div>
+
+                <div class="form-group mb-3">
+                    <input type="text" name="user_password" value="@Model[0].user_password" class="form-control" placeholder="Enter user Password" />
+                </div>
+                <input type="hidden" name="user_image" value="@Model[0].user_image" />
+                <div class="text-center">
+                    <input type="submit" class="btn btn-primary btn-block" value="Update Profile" style="width: 100%; background-color: #007bff;" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,113 @@
+﻿@using DecorVista.Models
+@{
+    Layout = "_Layout";
+}
+@model List<Cart>
+<section class="breadcrumb-area style2" style="background-image: url(~/images/resources/breadcrumb-bg-2.jpg);">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="inner-content-box clearfix">
+                    <div class="title-s2 text-center">
+                        <span>Shopping cart</span>
+                        <h1>That Perfectly Fits Your Life</h1>
+                    </div>
+                    <div class="breadcrumb-menu float-left">
+                        <ul class="clearfix">
+                            <li><a href="index-2.html">Home</a></li>
+                            <li><a href="shop.html">Shop</a></li>
+                            <li class="active">Shopping Cart</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="cart-area">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+
+                    <div class="table-outer">
+
+                        <table class="cart-table">
+                            <thead class="cart-header">
+                                <tr>
+                                    <th class="prod-column">Products</th>
+                                    <th>&nbsp;</th>
+                                    <th>Quantity</th>
+                                    <th class="availability">Availability</th>
+                                    <th class="price">Price</th>
+                                    <th>Total</th>
+                                    <th>Remove</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                            
+                            @foreach (var std in Model)
+                            {
+                                <tr>
+                                    <td colspan="2" class="prod-column">
+                                        <div class="column-box">
+
+                                            <div class="title">
+                                                <input type="hidden" name="Product_name" value="@std.Product_name" />
+                                                <input type="hidden" name="Std_email" value="@Html.Partial("User_email",ViewData["users"])" />
+                                                <h3 class="prod-title">@std.Product_name</h3>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="input-group">
+                                            <input type="number" name="name" value="@std.Product_quantity" />
+                                        </div>
+                                    </td>
+                                    <td class="unit-price">
+                                        <div class="available-info">
+                                            <span class="icon fa fa-check thm-bg-clr"></span>Item(s)<br>Available Now
+                                        </div>
+                                    </td>
+                                    <input type="hidden" name="Product_price" value="@std.Product_price" />
+                                    <td class="price">@std.Product_price</td>
+                                    <td class="sub-total">
+                                        Rs <span name="Product_total_price" class="total-price">@std.Product_total_price</span>
+                                        <input type="hidden" name="Product_total_price" value="@std.Product_price" class="sub-total total-price" />
+
+                                    </td>
+                                    <td>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" class="btn btn-warning dropdown-toggle">Options</a>
+                                            <div class="dropdown-menu">
+                                                <a href="@Url.Action("checkout","home",new{id=std.Cart_id})" class="dropdown-item has-icon"><i class="far fa-edit"></i>Checkout</a>
+                                                <a href="@Url.Action("removecart","home",new{id=std.Cart_id})" class="dropdown-item has-icon text-danger">
+                                                    <i class="far fa-trash-alt"></i>
+                                                    Remove
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                </tr>
+                            }                             
+                            </tbody>
+                        </table>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+

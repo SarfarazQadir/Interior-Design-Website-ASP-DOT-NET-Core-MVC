@@ -1,0 +1,170 @@
+﻿@using DecorVista.Models
+@{
+    Layout = "_Layout";
+}
+@model Product
+<section class="breadcrumb-area style2" style="background-image: url(~/images/resources/breadcrumb-bg-2.jpg);">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="inner-content-box clearfix">
+                    <div class="title-s2 text-center">
+                        <span>Shopping cart</span>
+                        <h1>That Perfectly Fits Your Life</h1>
+                    </div>
+                    <div class="breadcrumb-menu float-left">
+                        <ul class="clearfix">
+                            <li><a href="index-2.html">Home</a></li>
+                            <li><a href="shop.html">Shop</a></li>
+                            <li class="active">Shopping Cart</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<form method="post">
+    <section class="cart-area">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+
+                    <div class="table-outer">
+
+                        <table class="cart-table">
+                            <thead class="cart-header">
+                                <tr>
+                                    <th class="prod-column">Products</th>
+                                    <th>&nbsp;</th>
+                                    <th>Quantity</th>
+                                    <th class="availability">Availability</th>
+                                    <th class="price">Price</th>
+                                    <th>Total</th>
+                                    <th>Remove</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td colspan="2" class="prod-column">
+                                        <div class="column-box">
+                                            <div class="prod-thumb">
+                                                <input type="hidden" name="name" value="" />
+                                                <a href="#"><img src="@("~/Adminassests/ProductImages/"+Model.product_image)" asp-append-version="true" alt=""></a>
+                                            </div>
+                                            <div class="title">
+                                                <input type="hidden" name="Product_name" value="@Model.product_name" />
+                                                <input type="hidden" name="Std_email" value="@Html.Partial("User_email",ViewData["users"])" />
+                                                <h3 class="prod-title">@Model.product_name</h3>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="input-group">
+                                            <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(this, -1)">-</button>
+                                            <input class=" form-control" type="text" value="1" name="Product_quantity" style="width: 60px; text-align: center;">
+                                            <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(this, 1)">+</button>
+                                        </div>
+                                    </td>
+
+
+                                    <td class="unit-price">
+                                        <div class="available-info">
+                                            <span class="icon fa fa-check thm-bg-clr"></span>Item(s)<br>Available Now
+                                        </div>
+                                    </td>
+                                    <input type="hidden" name="Product_price" value="@Model.product_price" />
+                                    <td class="price">@Model.product_price</td>
+                                    <td class="sub-total">Rs <span name="Product_total_price"  class="total-price">@Model.product_price</span>
+                                        <input type="hidden" name="Product_total_price" value="@Model.product_price" class="sub-total total-price"  />
+
+                                    </td>
+                                    <td>
+                                        <div class="remove">
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input name="remove" type="checkbox">
+                                                    <span>Remove</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                            <div class="col-xl-6 col-lg-3 col-md-4 col-sm-12">
+                                <a>
+                                <div class="update-cart pull-right">
+                                    <input class="btn-one" type="submit" value="Update Cart">
+                                </div>
+                                </a>
+                               
+                            </div>
+                        
+
+                    </div>
+
+
+                </div>
+
+
+            </div>           
+        </div>
+    </section>
+</form>
+
+
+
+@* <script>
+    function changeQuantity(button, change) {
+        // Find the input field
+        var inputField = button.parentNode.parentNode.querySelector('input[name="Product_quantity"]');
+        var currentValue = parseInt(inputField.value) || 0;
+        var newValue = currentValue + change;
+
+        // Ensure the quantity does not go below 1
+        if (newValue < 1) {
+            newValue = 1;
+        }
+
+        inputField.value = newValue;
+
+        // Update total price
+        var price = parseFloat('@Model.product_price');
+        var totalPrice = (price * newValue).toFixed(2);
+        button.closest('tr').querySelector('.total-price').innerText = totalPrice;
+    }
+</script>
+ *@
+
+<script>
+    function changeQuantity(button, change) {
+        // Find the input field for quantity
+        var inputField = button.parentNode.parentNode.querySelector('input[name="Product_quantity"]');
+        var currentValue = parseInt(inputField.value) || 0;
+        var newValue = currentValue + change;
+
+        // Ensure the quantity does not go below 1
+        if (newValue < 1) {
+            newValue = 1;
+        }
+
+        inputField.value = newValue;
+
+        // Update total price
+        var price = parseFloat('@Model.product_price');
+        var totalPrice = (price * newValue).toFixed(2);
+
+        // Update the displayed total price
+        button.closest('tr').querySelector('.total-price').innerText = totalPrice;
+
+        // Update the hidden input for total price
+        var hiddenTotalPriceInput = button.closest('tr').querySelector('input[name="Product_total_price"]');
+        hiddenTotalPriceInput.value = totalPrice;
+    }
+</script>

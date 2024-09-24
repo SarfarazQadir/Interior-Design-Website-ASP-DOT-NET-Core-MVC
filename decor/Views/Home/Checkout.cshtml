@@ -1,0 +1,136 @@
+﻿@{
+    Layout = "_Layout";
+}
+@model Cart
+
+<section class="breadcrumb-area style2" style="background-image: url(images/resources/breadcrumb-bg-2.jpg);">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="inner-content-box text-center">
+                    <div class="title-s2">
+                        <span>Shopping Cart</span>
+                        <h1>That Perfectly Fits Your Life</h1>
+                    </div>
+                    <div class="breadcrumb-menu">
+                        <ul class="clearfix">
+                            <li><a href="index-2.html">Home</a></li>
+                            <li><a href="shop.html">Shop</a></li>
+                            <li class="active">Shopping Cart</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<form method="post">
+    <section class="checkout-area">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-md-12">
+                    <div class="existing-customer text-center">
+                        <h5>Existing Customer? <a href="#">Click here to login</a></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-md-12">
+                    <div class="coupon text-center">
+                        <h5>Have a Coupon? <a href="#">Click here to enter your code</a></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-12 col-lg-6">
+                    <div class="form shipping-info">
+                        <div class="shop-page-title mb-3">
+                            <div class="title">Shipping to a Different <span>Address</span> <input type="checkbox"></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 mb-3">
+                                <div class="field-label">Product Name*</div>
+                                <div class="field-input">
+                                    <input type="text" name="product_name" class="form-control" value="@Model.Product_name" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="field-label">Your Email*</div>
+                                <div class="field-input">
+                                    <input type="email" name="std_email" class="form-control" value="@Model.Std_email" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="field-label">Product Quantity*</div>
+                                <div class="field-input">
+                                    <input type="number" name="product_quantity" class="form-control" value="@Model.Product_quantity" min="1" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <div class="field-label">Card Number*</div>
+                                <div class="field-input">
+                                    <input type="text" name="card_number" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <div class="field-label">CVV*</div>
+                                <div class="field-input">
+                                    <input type="text" name="Cvv" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <div class="field-label">Product Price</div>
+                                <div class="field-input">
+                                    <input type="text" name="Cart_price" class="form-control" value="@Model.Product_price" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <div class="field-label">Total Price</div>
+                                <div class="field-input">
+                                    <input type="text" name="Cart_total_price" class="form-control" value="@Model.Product_total_price" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <div class="field-label">Date</div>
+                                <div class="field-input">
+                                    <input type="date" name="order_date" class="form-control" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom">
+            <div class="container col-xl-12">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                        <div class="cart-total">
+                            <div class="shop-page-title mb-3">
+                                <div class="title">Cart <span>Totals</span></div>
+                            </div>
+                            <ul class="cart-total-table list-unstyled">
+                                <li class="clearfix">
+                                    <span class="col col-title">Cart Subtotal</span>
+                                    <span class="col">@Model.Product_price</span>
+                                </li>
+                                <li class="clearfix">
+                                    <span class="col col-title">Order Total</span>
+                                    <span class="col">@Model.Product_total_price</span>
+                                </li>
+                            </ul>
+                            <div class="payment-options">
+                                <div class="placeorder-button text-left">
+                                    <button class="btn btn-primary" id="placeOrderButton" type="submit">Place Order</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</form>

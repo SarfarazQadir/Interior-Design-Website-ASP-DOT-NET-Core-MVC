@@ -1,0 +1,51 @@
+﻿@using DecorVista.Models
+@{
+    Layout = "_Layout";
+}
+
+@model List<Blogs>
+<section id="blog-area" class="blog-default-area">
+    <div class="container">
+        <div class="row">
+
+            @foreach (var std in Model)
+            {
+                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+                    <div class="single-blog-colum-style1">
+                        <!--Start single blog post-->
+                        <div class="single-blog-post style3 wow fadeInLeft animated" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInLeft;">
+                            <div class="img-holder">
+                                <img src="@("~/BlogImages/"+std.blog_article_image)" asp-append-version="true"  alt="Awesome Image">
+                                <div class="overlay-style-two"></div>
+                                <div class="overlay">
+                                    <div class="box">
+                                        <div class="post-date">
+                                            <h3>Mar <br><span>02</span></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-holder">
+                                <h3 class="blog-title"><a href="blog-single.html">Best low-cost interior designing ideas for your room</a></h3>
+                                <div class="meta-box">
+                                    <ul class="meta-info">
+                                        <li>By <a href="#">Rubin Santro</a></li>
+                                        <li>In <a href="#">Traditional</a></li>
+                                    </ul>
+                                </div>
+                                <div class="text">
+                                    <p>Same as saying through shrinking from toil and pain these cases perfectly simple...</p>
+                                    <a class="btn-two" href="blog-single.html">Read More<span class="flaticon-next"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End single blog post-->
+                    </div>
+                </div>
+            }
+
+
+
+        </div>
+    </div>
+</section>

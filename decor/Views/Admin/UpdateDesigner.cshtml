@@ -1,0 +1,88 @@
+﻿@using DecorVista.Models
+@{
+    ViewData["Title"] = "UpdateDesigner";
+    Layout = "~/Views/Shared/_Dashboard.cshtml";
+}
+@model Designer
+<section class="section">
+    <div class="section-body">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Designer Update</h4>
+                    </div>
+                    <div class="card-body">
+                        <form enctype="multipart/form-data" method="post">
+                            <div class="form-group row">
+                                <label for="inputEmail3" class="col-sm-3 col-form-label">Designer FirstName</label>
+                                <div class="col-sm-9">
+                                    <input type="hidden" name="designer_id" class="form-control" value="@Model.designer_id" id="inputEmail3">
+                                    <input type="text" name="designer_first_name" class="form-control" value="@Model.designer_first_name" id="inputEmail3">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputEmail3" class="col-sm-3 col-form-label">Designer LastName</label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="designer_last_name" class="form-control" value="@Model.designer_last_name" id="inputEmail3">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputEmail3" class="col-sm-3 col-form-label">Designer Phone</label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="designer_contact" class="form-control" value="@Model.designer_contact" id="inputEmail3">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputEmail3" class="col-sm-3 col-form-label">Designer Email</label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="designer_email" class="form-control" value="@Model.designer_email" id="inputEmail3">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputEmail3" class="col-sm-3 col-form-label">Designer Password</label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="designer_password" class="form-control" value="@Model.designer_password" id="inputEmail3">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputEmail3" class="col-sm-3 col-form-label">Designer Experience</label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="designer_experience" class="form-control" value="@Model.designer_experience" id="inputEmail3">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputEmail3" class="col-sm-3 col-form-label">Designer Address</label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="designer_address" class="form-control" value="@Model.designer_address" id="inputEmail3">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputEmail3" class="col-sm-3 col-form-label">Designer Specialization</label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="designer_specialization" class="form-control" value="@Model.designer_specialization" id="inputEmail3">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputEmail3" class="col-sm-3 col-form-label">Designer Portfolio</label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="designer_portfolio" class="form-control" value="@Model.designer_portfolio" id="inputEmail3">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputEmail3" class="col-sm-3 col-form-label">Designer Image</label>
+                                <div class="col-sm-9">
+                                    <input type="file" name="designer_image" class="form-control" value="@Model.designer_image" id="inputEmail3">
+                                </div>
+                            </div>
+                            <div class="card-footer center">
+                                <input type="submit" value="Update Designer" class="btn btn-primary" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
