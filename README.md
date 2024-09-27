@@ -15,3 +15,6 @@
 <h1>Blogs Page</h1>
 
 ![image](https://github.com/user-attachments/assets/b65700f7-5d02-4b52-bcee-b270a7bad51d)
+
+
+![image](https://github.com/user-attachments/assets/0bac0eee-9bfd-4ac4-a69d-dedaf1a5f99a)
