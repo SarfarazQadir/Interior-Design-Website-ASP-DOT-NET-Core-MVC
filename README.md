@@ -24,6 +24,6 @@
 
 ![image](https://github.com/user-attachments/assets/5b8bc9fd-222a-40e8-b45b-957cfc9af5be)
 
-
+<h1>Blogs Page</h1>
 
 ![image](https://github.com/user-attachments/assets/f8ff04aa-1077-4ae1-945d-986262338e21)
