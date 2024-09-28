@@ -19,3 +19,5 @@
 <h1>Contact Page</h1>
 
 ![image](https://github.com/user-attachments/assets/0bac0eee-9bfd-4ac4-a69d-dedaf1a5f99a)
+
+<h1>Book Appointment</h1>
