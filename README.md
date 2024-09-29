@@ -35,6 +35,6 @@
 
 ![image](https://github.com/user-attachments/assets/35a3a6cb-7533-4811-b405-8f5b570dbaab)
 
-
+<h1>Shop Detail</h1>
 
 ![image](https://github.com/user-attachments/assets/db692396-2f9b-438f-8655-6e4a6381726f)
