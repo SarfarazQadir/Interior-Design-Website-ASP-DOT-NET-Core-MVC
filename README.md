@@ -33,4 +33,7 @@
 
 <h1>Shop Page</h1>
 
+![image](https://github.com/user-attachments/assets/35a3a6cb-7533-4811-b405-8f5b570dbaab)
+
+
 
