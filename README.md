@@ -14,6 +14,9 @@
 
 <h1>Blogs Page</h1>
 
+![image](https://github.com/user-attachments/assets/40e9fb0d-5a39-4d25-9f06-7dc929f86bf4)
+
+
 ![image](https://github.com/user-attachments/assets/b65700f7-5d02-4b52-bcee-b270a7bad51d)
 
 <h1>Contact Page</h1>
