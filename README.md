@@ -27,3 +27,7 @@
 <h1>Blogs </h1>
 
 ![image](https://github.com/user-attachments/assets/f8ff04aa-1077-4ae1-945d-986262338e21)
+
+
+
+
