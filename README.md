@@ -50,3 +50,5 @@
 <h1>User Details</h1>
 
 ![image](https://github.com/user-attachments/assets/53168b68-0942-48cd-83ff-e01c64eba47c)
+
+<h1>User </h1>
