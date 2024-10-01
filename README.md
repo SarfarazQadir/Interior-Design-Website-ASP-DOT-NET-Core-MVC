@@ -56,3 +56,5 @@
 ![image](https://github.com/user-attachments/assets/7a3aa032-4f9f-4166-b25c-0389d878fff2)
 
 <h1>Designer Details</h1>
+
+![image](https://github.com/user-attachments/assets/314b389b-53ed-4dc9-9012-8891159335f0)
