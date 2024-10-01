@@ -54,3 +54,5 @@
 <h1>User </h1>
 
 ![image](https://github.com/user-attachments/assets/7a3aa032-4f9f-4166-b25c-0389d878fff2)
+
+<h1>Designer Details</h1>
