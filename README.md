@@ -71,3 +71,7 @@
 ![image](https://github.com/user-attachments/assets/eb170f1e-73ed-4c1d-8805-cf0a3120149d)
 
 <h1>Add Category</h1>
+
+![image](https://github.com/user-attachments/assets/33b8cf64-7b7b-4961-b6fb-87108c8e93db)
+
+
