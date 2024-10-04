@@ -80,4 +80,5 @@
 
 <h1>Add Product</h1>
 
+![image](https://github.com/user-attachments/assets/a3aa5643-373f-4e45-918d-050e5c68cf04)
 
