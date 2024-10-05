@@ -102,7 +102,7 @@
 
 ![image](https://github.com/user-attachments/assets/140f7516-f0c0-4beb-bf64-d219d7e0bd76)
 
-<h1>Feedback</h1>
+<h1>Admin Logout</h1>
 
 ![image](https://github.com/user-attachments/assets/a10fa90a-18f9-4266-9259-fa838262d49a)
 
