@@ -100,6 +100,7 @@
 
 <h1>Blog Details</h1>
 
+![image](https://github.com/user-attachments/assets/140f7516-f0c0-4beb-bf64-d219d7e0bd76)
 
 
 
